@@ -1,0 +1,203 @@
+[bar/opacity]
+
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 20
+offset-y = 0
+offset-x = 0
+
+border-top-size = 5
+border-bottom-size = 5
+border-right-size = 10
+border-left-size = 10
+
+;----------;
+; LOCATION ;
+;----------;
+
+bottom = false
+monitor = eDP1
+wm-restack = none
+override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = Noto Sans Mono:size=18;3
+
+;--------;
+; COLORS ;
+;--------;
+
+background = 0
+;foreground = #afafaf
+;foreground = #4a4a4a
+;foreground = #f4b5ff
+;foreground = #adadad
+foreground = #282c34
+border-color = 0
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
+
+fixed-center = true
+padding-left = 2 
+padding-right = 2
+module-margin = 1.5
+
+modules-left = i3
+modules-right = wlan memory battery backlight | date time pulseaudio
+; modules-left = volume backlight battery mpd
+; modules-center = i3
+; modules-right = wlan cpu date time
+
+tray-position = none
+tray-detached = true
+
+;---------;
+; MODULES ;
+;---------;
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+enable-scroll = false
+
+; label-unfocused-foreground = #afafaf
+;label-unfocused-foreground = #4a4a4a
+label-unfocused-foreground = #282c34
+label-focused-foreground = #00AFFF
+;label-focused-foreground = #fdff7a
+label-urgent-foreground = #ff0000
+
+[module/time]
+type = internal/date
+
+interval = 1.0
+
+date = %I:%M:%S %p
+
+[module/date]
+type = internal/date
+date = %A %B %e
+label = %date%
+
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = ADP0
+
+poll-interval = 1
+
+full-at = 95
+
+time-format=%H:%M
+
+label-discharging = %percentage%% (%time%)
+label-charging = %percentage%% (%time%)
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+[module/pulseaudio]
+
+;type=internal/pulseaudio
+;
+;format-volume = <bar-volume>
+;bar-volume-width = 20
+;;bar-volume-foreground-0 = #55aa55
+;;bar-volume-foreground-1 = #55aa55
+;;bar-volume-foreground-2 = #55aa55
+;;bar-volume-foreground-3 = #55aa55
+;;bar-volume-foreground-4 = #55aa55
+;bar-volume-foreground-0 = #3b783b 
+;bar-volume-foreground-1 = #3b783b 
+;bar-volume-foreground-2 = #3b783b 
+;bar-volume-foreground-3 = #3b783b 
+;bar-volume-foreground-4 = #3b783b 
+;bar-volume-foreground-5 = #f5a70a
+;bar-volume-foreground-6 = #ff5555
+;bar-volume-gradient = false
+;bar-volume-indicator = | 
+;bar-volume-indicator-font = 2 
+;bar-volume-indicator-foreground = #ff 
+;bar-volume-fill = ─ 
+;bar-volume-fill-font = 2 
+;bar-volume-empty = ─ 
+;bar-volume-empty-font = 2 
+;;bar-volume-empty-foreground = #ffffff
+;bar-volume-empty-foreground = #4a4a4a
+;label-muted = muted
+;use-ui-max = true
+;
+;interval=5
+type = internal/pulseaudio
+format-volume = <bar-volume>
+bar-volume-width = 21
+label-muted = muted
+bar-volume-indicator = |
+bar-volume-fill = ─
+bar-volume-empty = ─
+use-ui-max = true
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+;format = <ramp> <label>
+
+;label = %percentage%%
+
+;ramp-0 = 
+;ramp-1 = 
+;ramp-2 = 
+
+format = <bar>
+bar-width = 11
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+[module/wlan]
+type = internal/network
+
+interface = wlan0
+
+interval = 5
+
+label-connected = %local_ip% | %essid% | %downspeed%
+label-disconnected =  Not Connected
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage%%
+
+
+[module/memory]
+type = internal/memory
+label =  %gb_used%
+
+[module/network]
+type = internal/network
+interface = wlan0
+label-connected =  %downspeed% |  %upspeed%
