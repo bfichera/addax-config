@@ -29,6 +29,7 @@ prompt walters
 
 alias mitvpn="sudo openconnect --disable-ipv6 vpn.mit.edu/duo"
 alias office="ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
+alias config='/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
+alias cdshg='cd /home/bfichera/shg/fourier/camn2bi2'
 
 export PATH="/home/bfichera/bin:$PATH"
-alias config='/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'

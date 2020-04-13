@@ -1,3 +1,4 @@
+#!/bin/more
 # addax-config
 
 This repository contains important dotfiles for the laptop named addax.
