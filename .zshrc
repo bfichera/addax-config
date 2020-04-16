@@ -27,9 +27,10 @@ prompt walters
 # export LS_COLORS="$(vivid generate solarized-dark)"
 . /usr/share/LS_COLORS/dircolors.sh
 
-alias mitvpn="sudo openconnect --disable-ipv6 vpn.mit.edu/duo"
+alias mitvpn="sudo openconnect --disable-ipv6 --verbose --force-dpd=2 vpn.mit.edu/duo"
 alias office="ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
 alias config='/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
 alias cdshg='cd /home/bfichera/shg/fourier/camn2bi2'
+alias cdutils='cd /home/bfichera/.local/lib/python3.8/site-packages/shgutils'
 
 export PATH="/home/bfichera/bin:$PATH"
