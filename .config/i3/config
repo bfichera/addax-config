@@ -18,6 +18,8 @@ set $mod Mod1
 # set $backimg /home/bfichera/Pictures/mountains-purple-cartoon.png
 # set $backimg /home/bfichera/Pictures/shapes.png
 set $backimg /home/bfichera/Pictures/bird.png
+# set $backimg /home/bfichera/Pictures/cami1.jpg
+# set $backimg /home/bfichera/Pictures/cami2.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -167,6 +169,7 @@ exec --no-startup-id exec compton
 exec --no-startup-id exec phonesim -p 12345 /usr/share/phonesim/default.xml
 
 bindsym $mod+Shift+x exec --no-startup-id exec i3lock -ti $backimg
+bindsym $mod+Shift+u exec --no-startup-id exec /home/bfichera/bin/lock_and_suspend.sh $backimg
 ## bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 ## bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 ## bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
@@ -185,4 +188,6 @@ gaps inner 10
 gaps outer 0
 ## smart_gaps on
 ## smart_borders on
+
+#exec --no-startup-id exec /home/bfichera/bin/fix-mic
 

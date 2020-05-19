@@ -1,8 +1,8 @@
 syntax on
+set encoding=utf-8
 set number
 set ruler
 set visualbell
-set encoding=utf-8
 set wrap
 set tabstop=4
 set shiftwidth=4
@@ -21,6 +21,8 @@ hi Normal ctermbg=NONE guibg=NONE
 hi NonText ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=247 guifg=NONE
 hi LineNr ctermbg=NONE guibg=NONE
+set rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim
+"let g:powerline_pycmd="py3"
 
 "autocmd vimenter * NERDTree
 "autocmd StdinReadPre * let s:std_in=1

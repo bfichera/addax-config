@@ -116,6 +116,8 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
+format-battery-foreground = #dbdbdb
+
 [module/pulseaudio]
 
 ;type=internal/pulseaudio
