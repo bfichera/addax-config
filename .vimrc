@@ -21,6 +21,10 @@ hi NonText ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=247 guifg=NONE
 hi LineNr ctermbg=NONE guibg=NONE
 set rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim
+
+let g:syntastic_python_checkers = ['flake8']
+set rtp+=/usr/share/vim/vimfiles/plugin
+
 "let g:powerline_pycmd="py3"
 
 "autocmd vimenter * NERDTree

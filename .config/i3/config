@@ -17,7 +17,8 @@ set $mod Mod1
 # set $backimg /home/bfichera/Pictures/mountains-purple.png
 # set $backimg /home/bfichera/Pictures/mountains-purple-cartoon.png
 # set $backimg /home/bfichera/Pictures/shapes.png
-set $backimg /home/bfichera/Pictures/bird.png
+# set $backimg /home/bfichera/Pictures/bird.png
+set $backimg /home/bfichera/Pictures/greenfog-crop2.png
 # set $backimg /home/bfichera/Pictures/cami1.jpg
 # set $backimg /home/bfichera/Pictures/cami2.jpg
 

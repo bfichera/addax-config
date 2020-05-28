@@ -34,5 +34,6 @@ alias config='/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfich
 alias cdshg='cd /home/bfichera/shg/fourier/camn2bi2'
 alias cdutils='cd /home/bfichera/.local/lib/python3.8/site-packages/shgutils'
 alias cdprb='cd /home/bfichera/manuscripts/NCtas2/response-prb'
+alias cdshgpy='cd /home/bfichera/data/projects/shgpy'
 
 export PATH="/home/bfichera/bin:$PATH"
