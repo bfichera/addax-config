@@ -5,6 +5,7 @@ thread_indent_replies = 0
 quit_on_last_bclose = True
 displayed_headers = From, To, Cc, Bcc, Subject, Attach
 editor_cmd = /usr/bin/vim
+attachment_prefix = ~/Downloads
 [accounts]
     [[mit]]
         realname = Bryan Fichera
