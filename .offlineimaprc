@@ -1,0 +1,29 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+pythonfile = ~/bin/offlineimap-bin/readpass.py
+accounts = mit
+maxsyncaccounts = 1
+
+[Account mit]
+localrepository = mit-local
+remoterepository = mit-remote
+autorefresh = 0.5
+quick = 10
+postsynchook = '/home/bfichera/bin/offlineimap-bin/postsync.py'
+
+[Repository mit-local]
+type = Maildir
+localfolders = ~/mail
+
+[Repository mit-remote]
+type = IMAP
+remotehost = imap.exchange.mit.edu
+remoteport = 993
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = bfichera@mit.edu
+remotepasseval = get_pw()
+folderfilter = lambda foldername: foldername in ["INBOX", "Sent Items", "Drafts", "Sent", "Trash"]
+keepalive = 60
+holdconnectionopen = yes

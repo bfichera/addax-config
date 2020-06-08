@@ -1,0 +1,17 @@
+# Defaults
+defaults
+auth    on
+tls     on
+tls_trust_file  /etc/ssl/certs/ca-certificates.crt
+logfile     /home/bfichera/.config/msmtp/.msmtp.log
+
+# MIT
+account     mit
+host        outgoing.mit.edu
+port        587
+from        bfichera@mit.edu
+user        bfichera
+passwordeval "cat /home/bfichera/.password/msmtp"
+
+# Set default account
+account default : mit
