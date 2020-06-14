@@ -1,5 +1,7 @@
-term rxvt-unicode-256color
-hardstatus off
-hardstatus alwayslastline
-hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}%D %M %d %Y%{= Kc} %C%A%{-}'
+defutf8 on
+utf8 on on
 startup_message off
+term "screen-256color"
+
+caption always "%{=dd} "
+hardstatus alwayslastline "%{ck} %S %{wc} %{wk}$LOGNAME %{cw} %{ck}%H %?%{wc}%{wk} %-Lw%{Kw}%:%{Kc}%{kw}%?%{Kw} %n%f* %t %{dK}%+Lw %-="
