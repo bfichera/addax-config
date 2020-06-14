@@ -1,4 +1,4 @@
-auto_remove_unread = True
+auto_remove_unread = False
 notify_timeout = 5
 periodic_hook_frequency = 1
 thread_indent_replies = 0
@@ -28,3 +28,4 @@ attachment_prefix = ~/Downloads
         v = call hooks.open_in_browser(ui)
     [[search]]
         enter = select; fold *; fold *; move last; unfold
+        r = call hooks.check_notmuch(ui)

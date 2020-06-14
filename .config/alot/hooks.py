@@ -7,6 +7,7 @@ import tempfile
 import webbrowser
 from alot.helper import string_sanitize
 from alot.helper import string_decode
+import os
 
 
 new_mail_file = Path.home() / '.config' / 'alot' / 'new_mail'
@@ -20,6 +21,15 @@ def check_mail(new_mail_file):
             fh.write('0')
             fh.write('\n')
     return new_mail
+
+
+def check_notmuch(ui):
+    ui.notify('checking!')
+    notmuch_out = os.popen('notmuch new').readlines()
+    new_mail = len(notmuch_out) > 1
+    if new_mail:
+        for buf in ui.get_buffers_of_type(alot.buffers.SearchBuffer):
+            buf.rebuild()
 
 
 def loop_hook(**kwargs):
