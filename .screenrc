@@ -1,7 +1,8 @@
 defutf8 on
 utf8 on on
 startup_message off
-term "screen-256color"
-
+term "rxvt-unicode-256color"
+#
 caption always "%{=dd} "
-hardstatus alwayslastline "%{ck} %S %{wc} %{wk}$LOGNAME %{cw} %{ck}%H %?%{wc}%{wk} %-Lw%{Kw}%:%{Kc}%{kw}%?%{Kw} %n%f* %t %{dK}%+Lw %-="
+#hardstatus alwayslastline "%{Kw} %S %{wK} %{wk}$LOGNAME %{Kw} %{Kw}%H %?%{dK}%{dw} %-Lw%{dw}%:%{dK}%{kw}%?%{dc} %n%f* %t %{dc} %{dc}%+Lw%{dd} %-="
+hardstatus alwayslastline "%{Kw} %S %{wK} %{wk}$LOGNAME %{Kw} %{Kw}%H%{dK} %{dw}%-w%{dc}%{ck}%n %t%{dc}%{dw}%+w %{dd}"
