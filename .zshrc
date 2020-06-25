@@ -39,3 +39,10 @@ alias cdshgpy='cd /home/bfichera/data/projects/shgpy-private'
 
 export PATH="/home/bfichera/bin:$PATH"
 export EDITOR="/usr/bin/vim"
+
+source "$HOME/.zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+
+MODE_INDICATOR_VICMD="%%"
+MODE_INDICATOR_SEARCH='?'
+MODE_INDICATOR_VIINS='>'
+PS1="%B%(?..[%?] )%b%n@%U%m%u${MODE_INDICATOR_PROMPT} "
