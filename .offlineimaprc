@@ -9,7 +9,7 @@ maxsyncaccounts = 1
 [Account mit]
 localrepository = mit-local
 remoterepository = mit-remote
-autorefresh = 5
+autorefresh = 1
 quick = 0
 postsynchook = '/home/bfichera/bin/offlineimap-bin/postsync.py'
 
