@@ -31,11 +31,14 @@ alias mitvpn="sudo openconnect --disable-ipv6 --force-dpd=2 vpn.mit.edu/duo"
 alias office="ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
 alias cloud="ssh bfichera@txe1-login.mit.edu"
 alias config='/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
-alias cdshg='source /home/bfichera/shg/venv/bin/activate && cd /home/bfichera/shg/new/camn2bi2/thermal-cycle-analysis'
+alias cdshg='source /home/bfichera/shg/venv/bin/activate && cd /home/bfichera/shg/new'
 alias cdutils='cd /home/bfichera/.local/lib/python3.8/site-packages/shgutils'
 alias cdprb='cd /home/bfichera/manuscripts/NCtas2'
 alias cdshgpy-upstream='cd /home/bfichera/data/projects/shgpy'
 alias cdshgpy='cd /home/bfichera/data/projects/shgpy'
+alias cdsbhm='source /home/bfichera/data/projects/sbhm/venv/bin/activate && cd /home/bfichera/data/projects/sbhm'
+alias cdmusic='source /home/bfichera/data/projects/muzak/player/venv/bin/activate && cd /home/bfichera/data/projects/muzak'
+alias cdcars='source /home/bfichera/data/projects/crslib/venv/bin/activate && cd /home/bfichera/data/projects/crslib/crslib'
 
 export PATH="/home/bfichera/bin:$PATH"
 export EDITOR="/usr/bin/vim"
