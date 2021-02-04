@@ -33,7 +33,7 @@ font-0 = Noto Sans Mono:size=18;3
 ; COLORS ;
 ;--------;
 
-background = 0
+background = 00000000
 ;foreground = #afafaf
 ;foreground = #4a4a4a
 ;foreground = #f4b5ff

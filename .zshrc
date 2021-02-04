@@ -27,6 +27,8 @@ prompt walters
 # export LS_COLORS="$(vivid generate solarized-dark)"
 . /usr/share/LS_COLORS/dircolors.sh
 
+alias mv="mv -vn"
+alias rm="rm -v"
 alias mitvpn="sudo openconnect --disable-ipv6 --force-dpd=2 vpn.mit.edu/duo"
 alias office="ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
 alias cloud="ssh bfichera@txe1-login.mit.edu"

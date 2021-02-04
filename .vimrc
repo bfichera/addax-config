@@ -40,7 +40,7 @@ hi LineNr ctermbg=NONE guibg=NONE
 let g:ycm_confirm_extra_conf = 0
 
 
-set rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim
+set rtp+=/usr/lib/python3.9/site-packages/powerline/bindings/vim
 
 
 let g:syntastic_python_checkers = ["flake8"]
