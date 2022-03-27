@@ -1,0 +1,31 @@
+from pathlib import Path
+$PATH.append(Path.home() / 'bin')
+
+$PROMPT = '{env_name}{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE}{BOLD_BLUE}> {RESET}'
+$RIGHT_PROMPT = '{cwd}'
+$XONSH_COLOR_STYLE = 'paraiso-dark'
+
+
+def _cdproj(args):
+    if len(args) > 1:
+        print('Need one or zero arguments.')
+        return 0
+    if len(args) == 0:
+        args = ('',)
+    path = Path.home() / 'data' / 'projects' / args[0]
+    cd @(path)
+    return 0
+
+
+aliases['mv'] = "mv -vi"
+aliases['rm'] = "rm -v"
+aliases['mitvpn'] = "gp-saml-gui -S --gateway us-northeast-mit-1015.gpoyosn52nnn.gw.gpcloudservice.com -- --csd-wrapper=/usr/lib/openconnect/hipreport.sh"
+aliases['office'] = "ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
+aliases['cloud'] = "ssh -o TCPKeepAlive=yes -o ServerAliveCountMax=5760 -o ServerAliveInterval=15 bfichera@txe1-login.mit.edu"
+aliases['config'] = '/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
+aliases['cdshg'] = 'cd $HOME/data/projects/shg/new/camn2bi2/component-analysis'
+aliases['cdshgpy'] = 'cd /home/bfichera/data/projects/shgpy'
+aliases['freecad'] = 'exec=/usr/bin/env QT_SCALE_FACTOR=0.6 /usr/bin/freecad'
+aliases['cdproj'] = _cdproj
+aliases['wifi-home'] = 'sudo netctl start wlan0-BESTWIFIPOGGERS-5G'
+aliases['wifi-work'] = 'sudo netctl start wlan0-MIT SECURE'

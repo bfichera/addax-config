@@ -168,6 +168,8 @@ exec --no-startup-id exec xrandr --dpi 240
 exec --no-startup-id exec feh --bg-scale $backimg
 exec --no-startup-id exec compton
 exec --no-startup-id exec phonesim -p 12345 /usr/share/phonesim/default.xml
+exec --no-startup-id exec  dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Powered" variant:boolean:true
+exec --no-startup-id exec dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Online" variant:boolean:true
 
 bindsym $mod+Shift+x exec --no-startup-id exec i3lock -ti $backimg
 bindsym $mod+Shift+u exec --no-startup-id exec /home/bfichera/bin/lock_and_suspend.sh $backimg
@@ -181,8 +183,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pavucontrol
 # bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q set Master 5%+ unmute"
 # bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q set Master 5%- unmute"
 # bindsym XF86AudioMute exec --no-startup-id "amixer -q set Master toggle"
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1
 
 for_window [class="^.*"] border pixel 0
 gaps inner 10 

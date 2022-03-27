@@ -20,6 +20,7 @@ set background=dark
 nnoremap ,<space> :new <bar> Explore <CR>
 nnoremap <C-j> :SyntasticCheck <CR>
 nnoremap <C-k> :SyntasticReset <CR>
+nnoremap ,a :ArgWrap<CR>
 
 map <leader><space> :let @/="<cr>" clear search
 
@@ -40,9 +41,12 @@ hi LineNr ctermbg=NONE guibg=NONE
 let g:ycm_confirm_extra_conf = 0
 
 
-set rtp+=/usr/lib/python3.9/site-packages/powerline/bindings/vim
+set rtp+=/usr/lib/python3.10/site-packages/powerline/bindings/vim
+
+let g:argwrap_tail_comma=1
 
 
 let g:syntastic_python_checkers = ["flake8"]
 let g:syntastic_mode_map = {"mode":"passive"}
+let g:syntastic_shell = "/bin/sh"
 set rtp+=/usr/share/vim/vimfiles/plugin

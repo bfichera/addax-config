@@ -9,7 +9,8 @@ URxvt.background:   [100]#282c34
 !! URxvt.background:   [100]#342928
 !! URxvt.font: xft:Noto Sans Mono:size=6
 !! URxvt.font: xft:PowerlineSymbols:style=Medium:size=6
-URxvt.font: xft:Noto Mono for Powerline:style=Regular:size=6
+URxvt.font: xft:Noto Mono for Powerline:style=Regular:size=6,xft:DejaVu Sans:style=Regular:size=6
+!! URxvt.font: xft:Noto Color Emoji:style=Regular:size=6
 !! URxvt.font: xft:DejaVu Sans Mono for Powerline:autohint=true:size=6
 !! Larger history limit
 URxvt.saveLines: 1000000
