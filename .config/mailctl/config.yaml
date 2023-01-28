@@ -12,7 +12,7 @@ encrypt_cmd:
   args:
     - --encrypt
     - --recipient
-    - 3635F7EBFFD213E8
+    - F90C82B1500695B7
     - -o
 decrypt_cmd:
   exec: gpg
