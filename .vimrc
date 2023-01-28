@@ -50,3 +50,5 @@ let g:syntastic_python_checkers = ["flake8"]
 let g:syntastic_mode_map = {"mode":"passive"}
 let g:syntastic_shell = "/bin/sh"
 set rtp+=/usr/share/vim/vimfiles/plugin
+
+let g:tex_flavor = "latex"

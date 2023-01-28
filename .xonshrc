@@ -20,12 +20,22 @@ def _cdproj(args):
 aliases['mv'] = "mv -vi"
 aliases['rm'] = "rm -v"
 aliases['mitvpn'] = "gp-saml-gui -S --gateway us-northeast-mit-1015.gpoyosn52nnn.gw.gpcloudservice.com -- --csd-wrapper=/usr/lib/openconnect/hipreport.sh"
-aliases['office'] = "ssh -p 13802 bfichera@bfichera-office-arch.mit.edu"
+aliases['office'] = "ssh -XY -p 13802 bfichera@bfichera-office-arch.mit.edu"
 aliases['cloud'] = "ssh -o TCPKeepAlive=yes -o ServerAliveCountMax=5760 -o ServerAliveInterval=15 bfichera@txe1-login.mit.edu"
 aliases['config'] = '/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
-aliases['cdshg'] = 'cd $HOME/data/projects/shg/new/camn2bi2/component-analysis'
+aliases['cdshg'] = 'cd $HOME/data/projects/shg/SHG_camn2bi2/grc_poster_2022/src/plots'
+aliases['cdshg2'] = 'cd $HOME/data/projects/shg/SHG_camn2bi2/time_resolved_plot'
+aliases['cdshg3'] = 'cd $HOME/data/projects/shg/SHG_camn2bi2/time_resolved_ABCD'
+aliases['cdshg4'] = 'cd $HOME/data/projects/shg/SHG_camn2bi2/fine_tempdep'
 aliases['cdshgpy'] = 'cd /home/bfichera/data/projects/shgpy'
-aliases['freecad'] = 'exec=/usr/bin/env QT_SCALE_FACTOR=0.6 /usr/bin/freecad'
+# aliases['freecad'] = 'exec=/usr/bin/env QT_SCALE_FACTOR=0.6 /usr/bin/freecad'
 aliases['cdproj'] = _cdproj
 aliases['wifi-home'] = 'sudo netctl start wlan0-BESTWIFIPOGGERS-5G'
-aliases['wifi-work'] = 'sudo netctl start wlan0-MIT SECURE'
+aliases['wifi-work'] = "sudo netctl start 'wlan0-MIT SECURE'"
+aliases['wifi-cami'] = "sudo netctl start 'wlan0-johnturner'"
+aliases['wifi-chic'] = "sudo netctl start 'wlan0-eduroam'"
+aliases['wifi-bora'] = 'sudo netctl start wlan0-BEREHLA_24G'
+aliases['cdcmb'] = 'cd /home/bfichera/data/projects/CMB'
+aliases['cdcam'] = 'cd /home/bfichera/data/projects/grocery_covenants/data/acquire'
+aliases['cdpap'] = 'cd /home/bfichera/data/projects/manuscripts/paper_CaMn2Bi2/src/tex'
+aliases['cdtas2'] = 'cd /home/bfichera/data/projects/manuscripts/NCtas2'

@@ -1,0 +1,11 @@
+microsoft:
+  auth_endpoint: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+  auth_http_method: GET
+  auth_params_mode: query-string
+  token_endpoint: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  token_http_method: POST
+  token_params_mode: request-body-form
+  redirect_uri: http://localhost:8080
+  auth_scope: https://outlook.office.com/IMAP.AccessAsUser.All openid offline_access
+  client_id: e4e52c8c-a83d-4fc6-a148-bdf807cb95f7
+  client_secret: 2A58Q~1Ok.dHEsrkHvyC.R1RuStn6~0e6N04kdvs

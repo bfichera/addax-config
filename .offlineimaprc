@@ -2,7 +2,7 @@
 # get started fast.
 
 [general]
-pythonfile = ~/bin/offlineimap-bin/readpass.py
+pythonfile = ~/.offlineimap.py
 accounts = mit
 maxsyncaccounts = 1
 
@@ -19,11 +19,15 @@ localfolders = ~/mail
 
 [Repository mit-remote]
 type = IMAP
-remotehost = imap.exchange.mit.edu
+remotehost = outlook.office365.com
 remoteport = 993
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = bfichera@mit.edu
-remotepasseval = get_pw()
+auth_mechanisms = XOAUTH2
+oauth2_client_id = "e4e52c8c-a83d-4fc6-a148-bdf807cb95f7"
+oauth2_client_secret = "2A58Q~1Ok.dHEsrkHvyC.R1RuStn6~0e6N04kdvs"
+oauth2_request_url = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+oauth2_access_token_eval = get_token("bfichera@mit.edu")
 folderfilter = lambda foldername: foldername in ["INBOX", "Sent Items", "Drafts", "Sent", "Trash"]
 keepalive = 60
 holdconnectionopen = yes

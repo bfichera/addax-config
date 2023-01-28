@@ -1,0 +1,20 @@
+# The primary purpose of mailctl is providing IMAP/SMTP clients with the
+# capabilities of renewal and authorization of OAuth2 credentials. 
+# Accordingly only the OAuth2 related config entries are mandatory.
+
+# These four entries should be use for OAuth2 access method
+services_file: /home/bfichera/.config/mailctl/services.yaml
+oauth2_dir: /home/bfichera/.local/var/mailctl
+# This encryption method using gnupg.
+# Alternatives like gnome-keyring can also be configured here.
+encrypt_cmd:
+  exec: gpg
+  args:
+    - --encrypt
+    - --recipient
+    - 3635F7EBFFD213E8
+    - -o
+decrypt_cmd:
+  exec: gpg
+  args:
+    - --decrypt
