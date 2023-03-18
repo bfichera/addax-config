@@ -19,7 +19,6 @@ def _cdproj(args):
 
 aliases['mv'] = "mv -vi"
 aliases['rm'] = "rm -v"
-aliases['mitvpn'] = "gp-saml-gui -S --gateway us-northeast-mit-1015.gpoyosn52nnn.gw.gpcloudservice.com -- --csd-wrapper=/usr/lib/openconnect/hipreport.sh"
 aliases['office'] = "ssh -XY -p 13802 bfichera@bfichera-office-arch.mit.edu"
 aliases['cloud'] = "ssh -o TCPKeepAlive=yes -o ServerAliveCountMax=5760 -o ServerAliveInterval=15 bfichera@txe1-login.mit.edu"
 aliases['config'] = '/usr/bin/git --git-dir=/home/bfichera/.cfg --work-tree=/home/bfichera'
@@ -39,3 +38,5 @@ aliases['cdcmb'] = 'cd /home/bfichera/data/projects/CMB'
 aliases['cdcam'] = 'cd /home/bfichera/data/projects/grocery_covenants/data/acquire'
 aliases['cdpap'] = 'cd /home/bfichera/data/projects/manuscripts/paper_CaMn2Bi2/src/tex'
 aliases['cdtas2'] = 'cd /home/bfichera/data/projects/manuscripts/NCtas2'
+
+clear
