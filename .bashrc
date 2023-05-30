@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 set editor=vim
 
@@ -19,7 +19,7 @@ alias cdshg='cd $HOME/data/projects/shg/SHG_camn2bi2'
 alias cdshgpy='cd /home/bfichera/data/projects/shgpy'
 alias freecad='exec=/usr/bin/env QT_SCALE_FACTOR=0.6 /usr/bin/freecad'
 alias cdproj='cd /home/bfichera/data/projects'
-alias wifi-home='sudo netctl start wlan0-BESTWIFIPOGGERS-5G'
+alias wifi-home='sudo netctl start wlan0-BESTWIFIPOGGERS'
 alias wifi-work='sudo netctl start "wlan0-MIT SECURE"'
 alias wifi-cami='sudo netctl start "wlan0-johnturner"'
 alias wifi-chic='sudo netctl start "wlan0-eduroam"'
@@ -28,6 +28,7 @@ alias cdcmb='cd /home/bfichera/data/projects/CMB'
 alias cdcam='cd /home/bfichera/data/projects/grocery_covenants/data/acquire'
 alias cdpap='cd /home/bfichera/data/projects/manuscripts/paper_CaMn2Bi2/src/tex'
 alias cdtas2='cd /home/bfichera/data/projects/manuscripts/NCtas2'
+alias icat='kitty +kitten icat'
 
 alias ls='ls --color=auto'
 
