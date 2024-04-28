@@ -1,4 +1,9 @@
+[section/base]
+monitor = ${env:MONITOR:eDP1}
+
 [bar/opacity]
+
+inherit = section/base
 
 ;------------;
 ; DIMENSIONS ;
@@ -19,7 +24,6 @@ border-left-size = 10
 ;----------;
 
 bottom = false
-monitor = eDP1
 wm-restack = none
 override-redirect = false
 
@@ -203,3 +207,7 @@ label =  %gb_used%
 type = internal/network
 interface = wlan0
 label-connected =  %downspeed% |  %upspeed%
+
+[bar/secondary]
+inherit = section/base
+modules-left = i3
