@@ -1,4 +1,4 @@
 {
     "suggest.noselect": true,
-    "diagnostic.enable": false
+    "diagnostic.enable": true
 }

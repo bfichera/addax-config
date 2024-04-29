@@ -41,6 +41,9 @@ alias sacla='ssh bfichera@xhpcfep.hpc.spring8.or.jp'
 alias saclascp='scp bfichera@xhpcfep.hpc.spring8.or.jp'
 alias evince='evince-and-exit'
 alias cdthes='cd $HOME/data/projects/thesis'
+alias v='source venv/bin/activate'
+alias d='deactivate'
+alias z='zathura-and-exit'
 
 alias ls='ls --color=auto'
 
