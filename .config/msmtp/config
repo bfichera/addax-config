@@ -11,7 +11,7 @@ host        outgoing.mit.edu
 port        587
 from        bfichera@mit.edu
 user        bfichera
-passwordeval "cat /home/bfichera/.password/msmtp"
+passwordeval "cat /home/bfichera/.password/mit/msmtp"
 
 # Set default account
 account default : mit
