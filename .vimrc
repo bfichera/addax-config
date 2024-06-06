@@ -26,6 +26,10 @@ Plug 'lervag/vimtex'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vimwiki/vimwiki'
+
+Plug 'bfichera/vimwiki-git'
+
 call plug#end()
 filetype indent off
 
@@ -71,6 +75,19 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Set different syntax and file extension for vimwiki files
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" Change the default wiki to markdown format
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown'}
+
+" Define the Git repository path for Vimwiki
+let g:vimwiki_git = 1
+let g:vimwiki_git_commit_message = 'Auto-commit from Vimwiki'
+let g:vimwiki_git_automatic_push = 1
+let g:vimwiki_git_automatic_pull = 1
 
 
 python3 <<EOF
